@@ -1,0 +1,33 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+.button {
+  display: block;
+  text-align: center;
+  padding: 22px;
+  width: 100%;
+  text-decoration: none;
+  background-color: transparent;
+  color: v.$secondary-color;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 700;
+  border: 2px solid v.$secondary-color;
+  cursor: pointer;
+
+  @include m.tablet {
+    padding: 20px;
+  }
+
+  @include m.desktop {
+    padding: 25px;
+  }
+
+  &--secondary {
+    border-color: v.$primary-color;
+    color: v.$primary-color;
+  }
+
+}
+

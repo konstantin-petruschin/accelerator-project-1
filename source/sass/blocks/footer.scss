@@ -1,0 +1,138 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+.footer {
+  background-color: v.$background-footer;
+}
+
+.footer__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include m.tablet {
+    padding-top: 33px;
+    padding-bottom: 37px;
+    gap: 35px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 110px 393px 105px;
+  }
+
+  @include m.desktop {
+    grid-template-columns: 140px 610px 95px;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 29px;
+  }
+}
+
+.footer__logo-image {
+  width: 100px;
+  height: 20px;
+  display: block;
+
+  @include m.tablet {
+    width: 110px;
+    height: 22px;
+  }
+
+  @include m.desktop {
+    width: 130px;
+    height: 26px;
+  }
+}
+
+.footer__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include m.tablet {
+    column-gap: 31px;
+    align-items: center;
+  }
+
+  @include m.desktop {
+    column-gap: 83px;
+  }
+}
+
+.footer__nav-link {
+  display: inline-block;
+  color: v.$secondary-color;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 10px 0;
+
+  @include m.tablet {
+    line-height: 22px;
+    padding: 14px 0 12px;
+  }
+}
+
+.footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include m.tablet {
+    gap: 15px;
+  }
+
+  @include m.desktop {
+    gap: 10px;
+  }
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: v.$secondary-color;
+  text-decoration: none;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: v.$primary-color;
+  }
+
+  &--vk {
+    &::before {
+      mask-image: url("/__spritemap#sprite-vk-view");
+      mask-size: 13px 8px;
+    }
+  }
+
+  &--ok {
+    &::before {
+      mask-image: url("/__spritemap#sprite-ok-view");
+      mask-size: 10px 17px;
+    }
+  }
+
+  &--reddit {
+    &::before {
+      mask-image: url("/__spritemap#sprite-reddit-view");
+      mask-size: 15px 15px;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+.about {
+  background-color: v.$secondary-color;
+}
+
+.about__container {
+  position: relative;
+  padding: 41px 0 40px;
+  max-width: none;
+
+  @include m.tablet {
+    min-width: v.$tablet;
+    padding: 61px 45px 35px;
+  }
+
+  @include m.desktop {
+    max-width: v.$desktop;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 145px;
+    padding: 120px 103px 125px;
+  }
+}
+
+.about__info {
+  padding: 0 15px 35px;
+
+  @include m.tablet {
+    text-align: center;
+    padding: 0 90px 36px;
+  }
+
+  @include m.desktop {
+    max-width: 355px;
+    padding: 0;
+    text-align: left;
+  }
+
+  p {
+    margin: 0;
+    letter-spacing: -0.13px;
+  }
+
+  p:last-child {
+    display: none;
+
+    @include m.desktop {
+      display: block;
+      margin-top: 8px;
+    }
+  }
+}
+
+.about__heading {
+  margin-bottom: 12px;
+  text-align: left;
+
+  @include m.tablet {
+    margin-bottom: 19px;
+    text-align: center;
+  }
+
+  @include m.desktop {
+    margin-bottom: 26px;
+    text-align: left;
+  }
+}
+
+.about__condition {
+  display: block;
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 36px;
+
+  @include m.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include m.desktop {
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 94px;
+  }
+}
+
+.about__image-wrapper {
+  margin-bottom: 36px;
+
+  @include m.tablet {
+    margin-bottom: 0;
+  }
+}
+
+.about__image {
+  width: 100%;
+  height: auto;
+}
+
+.about__video {
+  min-height: 170px;
+
+  @include m.tablet {
+    max-width: 270px;
+    margin: -85px auto 0;
+  }
+
+  @include m.desktop {
+    margin-top: -115px;
+    max-width: 360px;
+    min-height: 230px;
+    width: 100%;
+  }
+}
+
