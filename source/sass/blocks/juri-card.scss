@@ -2,6 +2,7 @@
 @use "../common/variables.scss" as v;
 
 .juri-card {
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,7 +57,6 @@
   z-index: 2;
   box-sizing: border-box;
   }
-
 
 .juri-card:hover {
   .juri-card__info {

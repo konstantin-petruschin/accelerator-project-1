@@ -1,0 +1,127 @@
+@use "../mixins/media.scss" as m;
+@use "../common/variables.scss" as v;
+
+
+.contacts__container {
+  padding-top: 37px;
+  padding-bottom: 38px;
+
+  @include m.tablet {
+    padding: 61px 164px 59px;
+  }
+
+    @include m.desktop {
+      max-width: 100%;
+      min-width: 100%;
+      margin: 0;
+      padding: 60px 103px;
+    }
+}
+
+.contacts__heading {
+  margin-bottom: 37px;
+  text-align: left;
+
+  @include m.tablet {
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: 54px;
+    line-height: 54px;
+  }
+
+  @include m.desktop {
+    text-align: left;
+  }
+}
+
+.contacts__wrapper {
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.contacts__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+  &--contacts {
+    margin-top: 26px;
+  }
+
+  @include m.tablet {
+    gap: 14px;
+  }
+}
+
+.contacts__list--info {
+  @include m.tablet {
+    padding-right: 30px;
+    border-right: 1px solid #74819c;
+  }
+}
+
+.contacts__list--contacts {
+  @include m.tablet {
+    margin-top: 0;
+    padding-left: 30px;
+  }
+
+  @include m.desktop {
+    padding-left: 60px;
+  }
+}
+
+
+.contacts__title {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 12px;
+
+  @include m.tablet {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 6px;
+  }
+
+  &--contacts {
+    @include m.tablet {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.contacts__text {
+  margin: 0;
+  padding: 0;
+  line-height: 22px;
+  font-style: normal;
+
+  @include m.tablet {
+    font-size: 14px;
+  }
+}
+
+.contacts__link {
+  text-decoration: none;
+  text-transform: none;
+  color: v.$primary-color;
+  line-height: 22px;
+  font-weight: 400;
+
+  @include m.tablet {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
